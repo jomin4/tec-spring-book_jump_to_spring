@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.back'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.eclipse.jetty:jetty-server:11.0.24'
+    implementation 'org.eclipse.jetty:jetty-servlet:11.0.24'
+    implementation 'org.eclipse.jetty:jetty-io:11.0.24'
+    implementation 'org.eclipse.jetty:jetty-util:11.0.24'
+    implementation 'org.eclipse.jetty:jetty-http:11.0.24'
+    implementation 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+}
+
+application {
+    mainClass = 'com.back.Main'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
